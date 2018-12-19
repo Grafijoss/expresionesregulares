@@ -29,3 +29,4 @@ Podemos usar “\S” para encontrar justo lo contrario, todo lo que no son espa
 \d+[a-z] un digito o mas y que termine en una letra de a a z
 [0-9]*[a-z] los numeros son opcionales pero tiene que terminar con letras
 [0-9]*[a-z]?z\d puede o no terminar con v la z es obligatoria y terminar con digitos
+.+? todos los digits haciendo el match mas pequeño posible
