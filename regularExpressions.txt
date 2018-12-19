@@ -1,0 +1,31 @@
+
+
+. el punto es una clase para encontrar todo uno por uno
+* greedy - todo
++ uno o mas
+
+
+Dígitos:\d
+
+Encuentra todos los dígitos de 0 a 9.
+\d es equivalente a poner [0-9].
+Si en vez de \d, usamos por ejemplo [0-2] nos encontrará solamente los dígitos de 0 a 2.
+Podemos usar “\D” para encontrar justo lo contrario, todo lo que no son dígitos.
+Palabras:\w
+
+Encuentra todo lo que puede ser parte de una palabra, tanto letras (minúsculas o mayúsculas) como números.
+\w es equivalente a poner [a-zA-Z0-9_].
+Si en vez de \w, usamos por ejemplo [a-zA-Z] nos encontrará solamente las letras.
+Podemos usar “\W” para encontrar justo lo contrario, todos los caracteres que no son parte de palabras.
+Espacios:\s
+
+Encuentra todos los espacios (los saltos de línea también son espacios).
+Podemos usar “\S” para encontrar justo lo contrario, todo lo que no son espacios.
+
+\w equivale a [a-zA-Z0-9_] es decir, no incluye la ñ ni vocales con tilde.
+
+#[a-fA-F0-9]{3,6} encuentra hexadecimales
+\d[a-z] digitos y que termine con una letra entra la a a la z
+\d+[a-z] un digito o mas y que termine en una letra de a a z
+[0-9]*[a-z] los numeros son opcionales pero tiene que terminar con letras
+[0-9]*[a-z]?z\d puede o no terminar con v la z es obligatoria y terminar con digitos
