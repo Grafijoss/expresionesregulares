@@ -33,9 +33,13 @@ Algunos puntos de este temario asumen un uso intermedio de la CLI, por lo que se
 1. Not `^`, su uso y sus peligros (lo contrario al match anticlases)
 	`\d\d\D\d\d` 2 digitos separados por algo que no sea un digito seguidos por dos digitos
 	`[^0-9]` todo lo que no sea un numero
+1. El caso de `()` agrupar y aectar al grupo
+	`(p.s)?to` : Hace que resultado contenga ['pasto ', 'pisto ', 'to ']
 1. El caso de `?` como delimitador
 	`.+?,`: match minimo
-1. Principio (`$`) y final de línea (`^`)
+	`(\d{2}\W?){3}` dos digitos separados por algo que no sea una letra (teléfonos)
+1. Principio (`^`) y final de línea  (`$`)
+	`^(\w+,){2,10}\w+$` inicia con una palabra que puede tener letra o numero entre 2 y 10 caracteres y termina con otra palabra
 1. Expresiones comunes:
   1. mails
   1. teléfonos
