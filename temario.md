@@ -13,25 +13,28 @@ Algunos puntos de este temario asumen un uso intermedio de la CLI, por lo que se
 1. Notas sobre el curso
 1. El caracter `.` e introducción a los caracteres especiales y su escapado
 1. Los delimitadores numéricos: 
-	(*) : Cero o más veces
-	(?): Cero o una sola vez delimitador
-	(+): una o más veces.
-	[a-z]? : Esto es que puede estar una sola vez o no estar una letra minuscula de la (a) a la (z).
-	\d*: Esto es que puede estar muchas veces o no estar un digito.
-	\d+: Esto es que puede estar muchas veces o una sola vez un digito.
+	`(*)`: Cero o más veces
+	`(?)`: Cero o una sola vez delimitador
+	`(+)`: una o más veces.
+	`[a-z]?` : Esto es que puede estar una sola vez o no estar una letra minuscula de la (a) a la (z).
+	`\d*`: Esto es que puede estar muchas veces o no estar un digito.
+	`\d+`: Esto es que puede estar muchas veces o una sola vez un digito.
 	csv1,csv2,csv3,csv4,csv5
-	.*,: trae todo antes de la ,
-	.+?,: match minimo
+	`.*,`: trae todo antes de la ,
+	`.+?,`: match minimo
 1. Los contadores `{1,4}`
-	\d{2,4}[\.\- ]?: de 2 a 4 digitos que pueden estar seguidos de un . o - o espacio vacio
+	`\d{2,4}[\.\- ]?`: de 2 a 4 digitos que pueden estar seguidos de un . o - o espacio vacio
 1. Las clases predefinidas 
 	`\w`, todas las palabras con letras y numeros `\W` lo contrario
-	`\d`, todos los numeros `D` lo conntrario
+	`\d`, todos los numeros `D` lo conntrario `\d?\d` 
 	`\s` todos los espacios `S` lo contrario
 	…
 1. Las clases construidas `[a-zA-Z0-9]`
-1. Not `^`, su uso y sus peligros
+1. Not `^`, su uso y sus peligros (lo contrario al match anticlases)
+	`\d\d\D\d\d` 2 digitos separados por algo que no sea un digito seguidos por dos digitos
+	`[^0-9]` todo lo que no sea un numero
 1. El caso de `?` como delimitador
+	`.+?,`: match minimo
 1. Principio (`$`) y final de línea (`^`)
 1. Expresiones comunes:
   1. mails
