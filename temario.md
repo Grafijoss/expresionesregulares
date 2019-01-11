@@ -42,12 +42,22 @@ Algunos puntos de este temario asumen un uso intermedio de la CLI, por lo que se
 	`^(\w+,){2,10}\w+$` inicia con una palabra que puede tener letra o numero entre 2 y 10 caracteres y termina con otra palabra
 1. Expresiones comunes:
   1. mails
+		`@[\w\.\-]{3,}\.\w{2,5}`: @mail.com 
+		`[\w\._]{5,30}\+?[\w]{0,10}@[\w\.\-]{3,}\.\w{2,5}`: esto.es_un.mail+complejo@mail.com
+	1. URLS
+		`https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S*$` https://www.instagram.com/p/\\\BXB4zsUlW5Z/?taken-by=beco.mx
   1. teléfonos
+		`^\+?(\d{2,3}[.-\s]?){2,2}\d+[#pe]?\d*$`: +845-938-938 039-038-938#123
   1. logs
+		`^\[LOG.*\[LOG\].*user:@\w+?\]\s.*$`: [LOG DATA] [LOG] [user:@celismx] Did something
   1. nombres
-  1. locaciones
+		`^([A-ZÁÉÍÓÚÑ][a-záéíóúñ]+\s?){3,4}$`: Miguel Ignacio Rodríguez Álvarez
+  1. locaciones 
+		`^-?(\d{1,3}\.\d{6,6},\s?){2,2}\d{4,4}\.?\d{2,2}$`: -99.205581, 19.429652,2275.10
+		`^-?\d{1,3}\s\d{1,2}'\s\d{2,2}.\d{2,2}"[WE],\s?-?\d{1,3}\s\d{1,2}'\s\d{2,2}.\d{2,2}"[NS]$`: -34 54' 32.00"E, -3 21' 67.00"S
     1. [what three words](https://what3words.com/)
 1. Búsqueda y reemplazo
+	`^\d+::(.+)\((\d+)\)::.+$` : 1::Toy Story (1995)::Adventure|Animation|Children|Comedy|Fantasy `$1. $2` :  Toy Story . 1995
 1. Procesadores de texto
 1. `grep` y `find` desde consola
 1. Regex en
